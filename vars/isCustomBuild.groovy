@@ -21,6 +21,6 @@ def call() {
     // GitHub organisation base URL
     def gitURI = 'git@github.com:vyos/' + getGitRepoName()
     def httpURI = 'https://github.com/vyos/' + getGitRepoName()
-
+    return false
     return !((getGitRepoURL() == gitURI) || (getGitRepoURL() == httpURI)) || isPullRequest()
 }
